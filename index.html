@@ -3,124 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>روزنامہ صوتِ قلم | Daily Saut-e-Qalam - ہر لفظ ضمیر کی آواز</title>
-<meta name="description" content="روزنامہ صوتِ قلم پاکستان کا معتبر اخبار۔ چیف ایڈیٹر اسد عباس تارڑ">
-<meta name="keywords" content="Daily Saut-e-Qalam, روزنامہ صوت قلم, Urdu Newspaper">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>">
+<title>روزنامہ صوتِ قلم | Daily Saut-e-Qalam</title>
+
+<!-- WhatsApp + Facebook Logo -->
+<meta property="og:title" content="روزنامہ صوتِ قلم | Daily Saut-e-Qalam">
+<meta property="og:description" content="ہر لفظ ضمیر کی آواز">
+<meta property="og:image" content="https://sohailakash338.github.io/NAYA-EXPRESS-MEDIA-GROUP-GULFAM-PRESS-CARD-/nex.logo.jpg?v=900">
+<meta name="twitter:card" content="summary_large_image">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="nex.logo.jpg">
 
 <style>
-:root{
-  --navy: #0A1128;
-  --royal: #1C3FAA;
-  --gold: #C9A227;
-  --white: #FFFFFF;
-  --grey: #F5F5F5;
-  --text: #1A1A1A;
-}
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-  font-family: 'Noto Nastaliq Urdu', serif;
-  background: var(--white);
-  color: var(--text);
-  line-height: 1.8;
+  font-family:'Noto Nastaliq Urdu', serif;
+  background:#060606;
+  color:#fff;
+  line-height:1.8;
 }
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
-/* 1. Premium Header */
+/* NEX STYLE HEADER */
 .top-bar{
-  background: var(--navy); color: var(--white); padding:8px 0;
-  font-family:'Inter',sans-serif; font-size:13px;
+  background:linear-gradient(90deg, #00ff88 0%, #ffb400 100%);
+  color:#000; padding:10px 0; text-align:center;
+  font-family:'Poppins'; font-weight:700; font-size:14px;
 }
 .header-main{
-  background: var(--white); border-bottom: 3px solid var(--gold);
-  padding:20px 0; position:sticky; top:0; z-index:999;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  background:linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  border-bottom:3px solid #ffb400; padding:30px 0;
+  box-shadow:0 0 30px rgba(0,255,136,0.2);
 }
-.logo-area{text-align:center}
-.logo-area h1{
-  font-size:48px; color: var(--navy); letter-spacing:2px;
+.logo-area{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.logo{width:80px;height:80px;border:3px solid #ffb400;border-radius:15px;padding:8px;background:linear-gradient(135deg,#1a3a52 0%,#0d2438 100%)}
+.logo img{width:100%;height:100%;object-fit:contain}
+.logo-text h1{
+  font-size:42px; color:#00ff88; text-shadow:0 0 20px rgba(0,255,136,0.5);
 }
-.logo-area .en{
-  font-family:'Inter',sans-serif; font-size:18px; color: var(--royal); font-weight:600;
+.logo-text .en{
+  font-family:'Poppins'; font-size:16px; color:#ffb400; font-weight:700; letter-spacing:2px;
 }
-.logo-area .tagline{
-  font-size:16px; color: var(--gold); margin-top:5px; font-weight:700;
+.logo-text .tagline{
+  font-size:18px; color:#fff; margin-top:5px;
 }
 
-/* 2. Navigation */
-nav{
-  background: var(--royal); margin-top:15px;
-}
+/* NAV - NEX STYLE */
+nav{background:#0a0a0a; margin-top:20px; border:2px solid #00ff88; border-radius:12px}
 nav ul{display:flex;justify-content:center;list-style:none;flex-wrap:wrap}
 nav a{
-  display:block; padding:15px 25px; color:var(--white);
-  text-decoration:none; font-family:'Inter',sans-serif; font-weight:600;
-  transition:0.3s;
+  display:block; padding:15px 25px; color:#00ff88;
+  text-decoration:none; font-family:'Poppins'; font-weight:700;
+  transition:0.3s; letter-spacing:1px;
 }
-nav a:hover{background: var(--gold); color: var(--navy);}
+nav a:hover{background:#ffb400; color:#000}
 
-/* 18. Breaking News */
+/* BREAKING NEWS */
 .breaking{
-  background: #FFE5E5; border-left:5px solid red; padding:12px 20px;
-  margin:20px 0; font-weight:700; color:#B91C1C;
+  background:linear-gradient(90deg, rgba(255,0,0,0.2) 0%, rgba(255,0,0,0.1) 100%);
+  border-right:5px solid red; padding:15px 20px;
+  margin:25px 0; font-weight:700; color:#ff5555; border-radius:8px;
 }
-.breaking span{background:red; color:white; padding:3px 10px; margin-left:10px}
+.breaking span{background:red; color:white; padding:5px 12px; margin-left:10px; border-radius:5px}
 
-/* Sections */
+/* SECTIONS */
 .section{padding:60px 0}
 .section-title{
-  font-size:28px; color: var(--navy); border-bottom:2px solid var(--gold);
-  padding-bottom:10px; margin-bottom:30px;
+  font-size:32px; color:#00ff88; text-align:center;
+  margin-bottom:40px; text-shadow:0 0 15px rgba(0,255,136,0.4);
 }
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
 
-/* Cards - Clean & Hygienic */
+/* CARDS - NEX STYLE */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
 .card{
-  background: var(--grey); padding:25px; border-radius:4px;
-  border-top:3px solid var(--gold);
+  background:linear-gradient(135deg, rgba(12,25,15,0.98) 0%, rgba(8,15,10,0.98) 100%);
+  border:2px solid rgba(0,255,136,0.5); padding:30px; border-radius:18px;
   transition:0.3s;
 }
-.card:hover{box-shadow:0 5px 20px rgba(0,0,0,0.1)}
-.card h3{color:var(--royal); margin-bottom:10px}
+.card:hover{box-shadow:0 0 30px rgba(0,255,136,0.3); transform:translateY(-5px)}
+.card h3{color:#ffb400; margin-bottom:12px; font-size:22px}
 
-/* Team Section */
+/* TEAM CARDS */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .team-card{
-  background:var(--white); border:1px solid #ddd; padding:30px; text-align:center;
+  background:linear-gradient(135deg,#0a3d62 0%,#1e6091 100%);
+  border:3px solid #ffb400; padding:35px; text-align:center; border-radius:18px;
 }
-.team-card h2{color:var(--navy); font-size:24px}
-.team-card .post{color:var(--gold); font-weight:700; margin:5px 0}
-.team-card .phone{font-family:'Inter'; color:var(--royal)}
+.team-card h2{color:#00ff88; font-size:26px}
+.team-card .post{color:#ffb400; font-weight:700; margin:8px 0}
+.team-card .phone{font-family:'Poppins'; color:#fff}
 
-/* Contact Form */
-.form-group{margin-bottom:20px}
-input,textarea{
-  width:100%; padding:12px; border:1px solid #ccc; border-radius:3px;
-  font-family:'Inter'; font-size:15px;
-}
-.btn{
-  background: var(--navy); color:var(--white); padding:12px 35px;
-  border:none; cursor:pointer; font-weight:700; transition:0.3s;
-}
-.btn:hover{background: var(--gold); color:var(--navy)}
-
-/* Footer */
+/* FOOTER */
 footer{
-  background: var(--navy); color:var(--white); padding:40px 0; margin-top:60px;
+  background:#000; border-top:3px solid #ffb400;
+  padding:40px 0; margin-top:60px; text-align:center;
 }
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
-footer h4{color:var(--gold); margin-bottom:15px}
-footer a{color:var(--grey); text-decoration:none; display:block; margin:8px 0}
-.copyright{
-  text-align:center; border-top:1px solid #333; padding-top:20px; margin-top:30px;
-  font-family:'Inter'; font-size:13px;
-}
+footer p{color:#00ff88}
 
 @media(max-width:768px){
-  .logo-area h1{font-size:32px}
+  .logo-text h1{font-size:28px}
   .grid-2{grid-template-columns:1fr}
-  nav ul{flex-direction:column}
 }
 </style>
 </head>
@@ -128,18 +110,19 @@ footer a{color:var(--grey); text-decoration:none; display:block; margin:8px 0}
 
 <!-- Top Bar -->
 <div class="top-bar">
-  <div class="container">
-    Email: dailysauteqalam@gmail.com | Chief: 03005614182
-  </div>
+  Email: dailysauteqalam@gmail.com | Chief: 03005614182
 </div>
 
 <!-- Header -->
 <header class="header-main">
   <div class="container">
     <div class="logo-area">
-      <h1>روزنامہ صوتِ قلم</h1>
-      <p class="en">DAILY SAUT-E-QALAM</p>
-      <p class="tagline">ہر لفظ ضمیر کی آواز</p>
+      <div class="logo"><img src="nex.logo.jpg" alt="Logo"></div>
+      <div class="logo-text">
+        <h1>روزنامہ صوتِ قلم</h1>
+        <p class="en">DAILY SAUT-E-QALAM</p>
+        <p class="tagline">ہر لفظ ضمیر کی آواز</p>
+      </div>
     </div>
     <nav>
       <ul>
@@ -154,53 +137,26 @@ footer a{color:var(--grey); text-decoration:none; display:block; margin:8px 0}
 </header>
 
 <div class="container">
-  <!-- Breaking News Ticker -->
   <div class="breaking">
     <span>BREAKING</span>
     روزنامہ صوتِ قلم کی نئی ویب سائٹ لانچ - اب خبریں سب سے پہلے
   </div>
 </div>
 
-<!-- About, Mission, Vision -->
+<!-- About -->
 <section id="about" class="section">
   <div class="container">
     <h2 class="section-title">ادارے کا تعارف</h2>
     <div class="grid-3">
-      <div class="card">
-        <h3>About Us</h3>
-        <p>روزنامہ صوتِ قلم ایک آزاد اور غیر جانبدار اخبار ہے۔ ہمارا مقصد عوام تک سچائی اور حقائق پہنچانا ہے۔</p>
-      </div>
-      <div class="card">
-        <h3>Mission</h3>
-        <p>ذمہ دارانہ صحافت کے ذریعے معاشرے میں شعور بیدار کرنا اور عوامی مسائل کو اجاگر کرنا۔</p>
-      </div>
-      <div class="card">
-        <h3>Vision</h3>
-        <p>ملک کا سب سے قابل اعتماد اور پیشہ ورانہ میڈیا ادارہ بننا۔</p>
-      </div>
+      <div class="card"><h3>About Us</h3><p>روزنامہ صوتِ قلم ایک آزاد اور غیر جانبدار اخبار ہے۔</p></div>
+      <div class="card"><h3>Mission</h3><p>ذمہ دارانہ صحافت کے ذریعے معاشرے میں شعور بیدار کرنا۔</p></div>
+      <div class="card"><h3>Vision</h3><p>ملک کا سب سے قابل اعتماد میڈیا ادارہ بننا۔</p></div>
     </div>
   </div>
 </section>
 
-<!-- Policy & Values -->
-<section id="policy" class="section" style="background:var(--grey)">
-  <div class="container">
-    <h2 class="section-title">ادارتی پالیسی اور اقدار</h2>
-    <div class="grid-2">
-      <div class="card">
-        <h3>Editorial Policy</h3>
-        <p>ہم غیر جانبداری، توازن اور حقائق پر مبنی رپورٹنگ پر یقین رکھتے ہیں۔ کوئی خبر شائع کرنے سے پہلے اس کی تصدیق لازمی ہے۔</p>
-      </div>
-      <div class="card">
-        <h3>Core Values</h3>
-        <p>سچائی، دیانت داری، پیشہ ورانہ مہارت، عوامی خدمت اور قانون کی حکمرانی ہمارے بنیادی اصول ہیں۔</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Chief Editor Section -->
-<section id="team" class="section">
+<!-- Team -->
+<section id="team" class="section" style="background:#0a0a0a">
   <div class="container">
     <h2 class="section-title">ادارتی قیادت</h2>
     <div class="grid-2">
@@ -218,75 +174,21 @@ footer a{color:var(--grey); text-decoration:none; display:block; margin:8px 0}
   </div>
 </section>
 
-<!-- Latest News -->
-<section id="news" class="section" style="background:var(--grey)">
-  <div class="container">
-    <h2 class="section-title">تازہ ترین خبریں</h2>
-    <div class="grid-3">
-      <div class="card"><h3>ملک میں سیاسی صورتحال</h3><p>تفصیلات کے لیے ویب سائٹ وزٹ کریں...</p></div>
-      <div class="card"><h3>معیشت سے متعلق اہم پیش رفت</h3><p>تفصیلات کے لیے ویب سائٹ وزٹ کریں...</p></div>
-      <div class="card"><h3>کھیلوں کی دنیا کی خبریں</h3><p>تفصیلات کے لیے ویب سائٹ وزٹ کریں...</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- Contact -->
 <section id="contact" class="section">
   <div class="container">
     <h2 class="section-title">رابطہ کریں</h2>
-    <div class="grid-2">
-      <div>
-        <h3>Official Contact Information</h3>
-        <p><b>Email:</b> dailysauteqalam@gmail.com</p>
-        <p><b>Chief Editor:</b> 0300-5614182</p>
-        <p><b>Deputy Editor:</b> 0302-5485338</p>
-        <br>
-        <h3>Social Media</h3>
-        <p>Facebook | Twitter | LinkedIn | YouTube</p>
-      </div>
-      <div>
-        <h3>Contact Form</h3>
-        <div class="form-group"><input type="text" placeholder="آپ کا نام"></div>
-        <div class="form-group"><input type="email" placeholder="آپ کا ای میل"></div>
-        <div class="form-group"><textarea rows="4" placeholder="آپ کا پیغام"></textarea></div>
-        <button class="btn">پیغام بھیجیں</button>
-      </div>
+    <div class="card">
+      <p><b>Email:</b> dailysauteqalam@gmail.com</p>
+      <p><b>Chief:</b> 0300-5614182</p>
+      <p><b>Deputy:</b> 0302-5485338</p>
     </div>
-  </div>
-</section>
-
-<!-- Call To Action -->
-<section style="background:var(--royal); color:white; padding:40px 0; text-align:center">
-  <div class="container">
-    <h2>تازہ ترین خبروں کے لیے ہم سے جڑیں</h2>
-    <button class="btn" style="background:var(--gold); color:var(--navy); margin-top:15px">Subscribe</button>
   </div>
 </section>
 
 <!-- Footer -->
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h4>روزنامہ صوتِ قلم</h4>
-        <p>ہر لفظ ضمیر کی آواز</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Disclaimer</a>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <a href="mailto:dailysauteqalam@gmail.com">dailysauteqalam@gmail.com</a>
-        <a href="tel:03005614182">0300-5614182</a>
-      </div>
-    </div>
-    <div class="copyright">
-      © 2026 Daily Saut-e-Qalam. All Rights Reserved.
-    </div>
-  </div>
+  <p>© 2026 روزنامہ صوتِ قلم | ہر لفظ ضمیر کی آواز</p>
 </footer>
 
 </body>
