@@ -1,13 +1,306 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="ur" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>मेरी वेबसाइट</title>
-<style>body{font-family:Arial,sans-serif;margin:40px;text-align:center}h1{color:#0a66c2}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>روزنامہ صوتِ قلم | Daily Saut-e-Qalam - ہر لفظ ضمیر کی آواز</title>
+<meta name="description" content="روزنامہ صوتِ قلم - ہر لفظ ضمیر کی آواز۔ پاکستان کا معتبر اور پیشہ ورانہ اخبار">
+<meta name="keywords" content="Daily Saut-e-Qalam, روزنامہ صوت قلم, Urdu Newspaper, Pakistan News">
+<meta property="og:title" content="روزنامہ صوتِ قلم | Daily Saut-e-Qalam">
+<meta property="og:description" content="ہر لفظ ضمیر کی آواز">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>">
+
+<style>
+:root{
+  --navy: #0A1128;
+  --royal: #1C3FAA;
+  --gold: #D4AF37;
+  --white: #FFFFFF;
+  --grey: #E5E7EB;
+  --cyan: #00D4FF;
+  --glass: rgba(255,255,255,0.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family: 'Noto Nastaliq Urdu', serif;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--royal) 100%);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* Animated Background */
+body::before{
+  content:'';
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background: radial-gradient(circle at 20% 50%, rgba(212,175,55,0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(0,212,255,0.1) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+  z-index:-1;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
+
+/* Glassmorphism */
+.glass{
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:1000;
+  padding:15px 0;
+  animation: fadeInDown 1s ease;
+}
+.nav{
+  display:flex;justify-content:space-between;align-items:center;
+  max-width:1300px;margin:0 auto;padding:15px 30px;
+}
+.logo{
+  font-size:28px;font-weight:700;color:var(--gold);
+  text-shadow: 0 0 20px rgba(212,175,55,0.5);
+}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a{
+  color:var(--white);text-decoration:none;font-family:'Inter',sans-serif;
+  transition: all 0.3s; padding:8px 15px;border-radius:10px;
+}
+nav a:hover{
+  background: var(--gold); color: var(--navy);
+  box-shadow: 0 0 15px var(--gold);
+}
+
+/* Hero */
+.hero{
+  text-align:center;padding:120px 20px;
+  animation: fadeIn 1.5s ease;
+}
+.hero h1{
+  font-size: clamp(40px, 6vw, 80px); color: var(--gold);
+  text-shadow: 0 0 30px rgba(212,175,55,0.6);
+  margin-bottom:20px;
+}
+.hero .tagline{
+  font-size:24px;color:var(--cyan);margin-bottom:40px;
+}
+.btn-3d{
+  padding:15px 40px;background: linear-gradient(45deg, var(--gold), #F4E4BC);
+  color: var(--navy); border:none;border-radius:50px;
+  font-weight:700;font-family:'Inter',sans-serif;font-size:18px;
+  cursor:pointer;transition: all 0.3s;
+  box-shadow: 0 10px 30px rgba(212,175,55,0.4);
+}
+.btn-3d:hover{transform: translateY(-5px); box-shadow: 0 15px 40px rgba(212,175,55,0.6);}
+
+/* Sections */
+.container{max-width:1300px;margin:0 auto;padding:60px 20px}
+.section-title{
+  text-align:center;font-size:36px;margin-bottom:50px;color:var(--gold);
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.card{
+  padding:30px; transition: all 0.4s;
+}
+.card:hover{
+  transform: translateY(-10px);
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 30px rgba(212,175,55,0.3);
+}
+
+/* Ticker */
+.ticker{
+  background: var(--royal); padding:15px; overflow:hidden;
+  border-top:2px solid var(--gold); border-bottom:2px solid var(--gold);
+}
+.ticker-content{
+  white-space:nowrap; animation: scroll 20s linear infinite;
+  font-weight:600;color:var(--gold);
+}
+@keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+
+/* Contact Form */
+input,textarea{
+  width:100%;padding:15px;margin:10px 0;border-radius:10px;
+  background: rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2);
+  color:var(--white);font-family:'Inter',sans-serif;
+}
+input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+
+/* Footer */
+footer{
+  padding:40px 20px;text-align:center;border-top:1px solid rgba(255,255,255,0.1);
+}
+.social{display:flex;gap:20px;justify-content:center;margin:20px 0}
+.social a{
+  width:50px;height:50px;display:grid;place-items:center;
+  background: var(--glass); border-radius:50%; color:var(--gold);
+  transition: all 0.3s;
+}
+.social a:hover{background: var(--gold); color: var(--navy); transform: rotate(360deg);}
+
+/* Animations */
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+
+/* Responsive */
+@media(max-width:768px){
+  nav ul{display:none}
+  .hero h1{font-size:40px}
+}
+</style>
 </head>
 <body>
-<h1>मेरी वेबसाइट में आपका स्वागत है!</h1>
-<p>यह एक बेसिक index.html फ़ाइल है।</p>
+
+<!-- 1. Premium Header + 2. Animated Nav -->
+<header class="glass">
+  <div class="nav">
+    <div class="logo">صوتِ قلم</div>
+    <nav>
+      <ul>
+        <li><a href="#about">ہمارے بارے میں</a></li>
+        <li><a href="#team">ٹیم</a></li>
+        <li><a href="#contact">رابطہ</a></li>
+        <li><a href="#news">تازہ ترین</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- 3. Hero Banner + 4. Logo + 5. Tagline -->
+<section class="hero">
+  <h1>روزنامہ صوتِ قلم</h1>
+  <p class="tagline">Daily Saut-e-Qalam</p>
+  <p class="tagline">ہر لفظ ضمیر کی آواز</p>
+  <button class="btn-3d" onclick="document.getElementById('news').scrollIntoView()">تازہ ترین خبریں</button>
+</section>
+
+<!-- 18. Breaking News Ticker -->
+<div class="ticker">
+  <div class="ticker-content">🚨 بریکنگ نیوز: روزنامہ صوتِ قلم کی ویب سائٹ لانچ | سچ کی آواز اب ڈیجیٹل پر بھی 🚨</div>
+</div>
+
+<!-- 6,7,8,9,10. About, Mission, Vision, Policy, Values -->
+<section id="about" class="container">
+  <h2 class="section-title">ہمارے بارے میں</h2>
+  <div class="grid">
+    <div class="card glass">
+      <h3>About Daily Saut-e-Qalam</h3>
+      <p>روزنامہ صوتِ قلم حق اور سچ کی آواز ہے۔ ہم غیر جانبدار اور پیشہ ورانہ صحافت پر یقین رکھتے ہیں۔</p>
+    </div>
+    <div class="card glass">
+      <h3>Mission</h3>
+      <p>عوام تک سچی اور فوری معلومات پہنچانا اور سماج میں مثبت تبدیلی لانا ہمارا مشن ہے۔</p>
+    </div>
+    <div class="card glass">
+      <h3>Vision</h3>
+      <p>پاکستان کا سب سے معتبر اور بااعتماد میڈیا ادارہ بننا۔</p>
+    </div>
+    <div class="card glass">
+      <h3>Editorial Policy</h3>
+      <p>غیر جانبداری، شفافیت اور عوامی مفاد ہماری پالیسی کا محور ہیں۔</p>
+    </div>
+    <div class="card glass">
+      <h3>Core Values</h3>
+      <p>سچائی، دیانت، پیشہ ورانہ مہارت اور عوامی خدمت ہمارے بنیادی اصول ہیں۔</p>
+    </div>
+  </div>
+</section>
+
+<!-- 11,12. Chief Editor Section -->
+<section id="team" class="container">
+  <h2 class="section-title">ادارتی ٹیم</h2>
+  <div class="grid">
+    <div class="card glass" style="text-align:center">
+      <h3>چیف ایڈیٹر</h3>
+      <h2 style="color:var(--gold)">اسد عباس تارڑ</h2>
+      <p>فون: 03005614182</p>
+    </div>
+    <div class="card glass" style="text-align:center">
+      <h3>ڈپٹی چیف ایڈیٹر</h3>
+      <h2 style="color:var(--gold)">رانا سہیل نواز</h2>
+      <p>فون: 03025485338</p>
+    </div>
+  </div>
+</section>
+
+<!-- 17. Latest News Preview -->
+<section id="news" class="container">
+  <h2 class="section-title">تازہ ترین خبریں</h2>
+  <div class="grid">
+    <div class="card glass"><h3>ملک بھر میں مہنگائی کی نئی لہر</h3><p>تفصیلات جلد...</p></div>
+    <div class="card glass"><h3>کھیلوں کی دنیا سے اہم خبر</h3><p>تفصیلات جلد...</p></div>
+    <div class="card glass"><h3>معیشت میں بہتری کے آثار</h3><p>تفصیلات جلد...</p></div>
+  </div>
+</section>
+
+<!-- 13,14,15,16. Contact -->
+<section id="contact" class="container">
+  <h2 class="section-title">ہم سے رابطہ کریں</h2>
+  <div class="grid">
+    <div class="card glass">
+      <h3>Official Contact</h3>
+      <p><b>Email:</b> dailysauteqalam@gmail.com</p>
+      <p><b>Chief Editor:</b> 03005614182</p>
+      <p><b>Deputy Editor:</b> 03025485338</p>
+      <div class="social">
+        <a href="#">f</a><a href="#">X</a><a href="#">in</a><a href="#">yt</a>
+      </div>
+    </div>
+    <div class="card glass">
+      <h3>Contact Form</h3>
+      <input type="text" placeholder="آپ کا نام">
+      <input type="email" placeholder="آپ کا ای میل">
+      <textarea rows="4" placeholder="آپ کا پیغام"></textarea>
+      <button class="btn-3d">پیغام بھیجیں</button>
+    </div>
+  </div>
+</section>
+
+<!-- 19. Call To Action -->
+<section class="container" style="text-align:center">
+  <div class="card glass">
+    <h2 style="color:var(--gold)">ہمارے ساتھ جڑیں</h2>
+    <p>تازہ ترین خبروں کے لیے ہماری ویب سائٹ وزٹ کرتے رہیں</p>
+    <button class="btn-3d">Subscribe Now</button>
+  </div>
+</section>
+
+<!-- 20,21,22,23,24. Footer -->
+<footer class="glass">
+  <p><b>Daily Saut-e-Qalam | روزنامہ صوتِ قلم</b></p>
+  <p>ہر لفظ ضمیر کی آواز</p>
+  <div style="margin:20px 0">
+    <a href="#" style="color:var(--gold);margin:0 10px">Privacy Policy</a>
+    <a href="#" style="color:var(--gold);margin:0 10px">Terms & Conditions</a>
+    <a href="#" style="color:var(--gold);margin:0 10px">Disclaimer</a>
+  </div>
+  <p>© 2026 Daily Saut-e-Qalam. All Rights Reserved.</p>
+</footer>
+
+<script>
+// Smooth Scroll + Fade In on Scroll
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.style.animation='fadeIn 1s ease forwards'}
+  })
+},{threshold:0.1});
+
+document.querySelectorAll('.card').forEach(card=>observer.observe(card));
+
+// Form Submit
+document.querySelector('.btn-3d').addEventListener('click',()=>{
+  alert('آپ کا پیغام موصول ہو گیا۔ شکریہ!');
+})
+</script>
+
 </body>
 </html>
